@@ -11,11 +11,117 @@ img {
   max-width: 100%;
 }
 
+body {
+  background-color: whitesmoke;
+}
+
 /****** ヘッダー ******/
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #333;
+}
+
+div.header {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.title {
+  position: absolute;
+  top: 30%;
+  /* 左右中央寄せ */
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+div.title h1 {
+  font-size: 72px;
+  color: white;
+  text-align: center;
+}
+
+div.title p {
+  font-size: 38px;
+  color: white;
+  text-align: center;
+}
 
 /****** メイン ******/
+div.block {
+  border: 2px solid #333;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: white;
+}
+
+div.block i {
+  margin-right: 15px;
+}
+
+/* プロフィール */
+p.name {
+  width: 100%;
+  text-align: center;
+}
+/* スキル */
+div.skil-details {
+  padding: 10px;
+  margin:2em 0;
+  position: relative;
+  padding: 0.5em 1.5em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+div.skil-details:before,
+div.skil-details:after{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 2px;
+    height: -webkit-calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-color: black;
+}
+div.skil-details:before {left: 10px;}
+div.skil-details:after {right: 10px;}
+div.skil-details p {
+    margin: 0;
+    padding: 0;
+}
+
+/* キャリア */
+div.career ul {
+  list-style: none;
+}
 
 /****** フッター ******/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #333;
+  padding: 40px 0;
+}
+
+div.copyright {
+  color: white;
+  position: absolute;
+  /* 左右中央寄せ */
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+div.copyright p {
+  margin: 0;
+}
 
 /****** レスポンシブ ******/
 @media screen and (max-width:1128px) {
