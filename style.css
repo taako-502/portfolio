@@ -65,17 +65,28 @@ div.block i {
   margin-right: 15px;
 }
 
+div.block li {
+  display:flex;
+  list-style: none;
+}
+
 /* プロフィール */
 p.name {
   width: 100%;
   text-align: center;
 }
+
+/* コンタクト */
+div.contact p.label {
+  width: 30%;
+}
+
 /* スキル */
 div.skil-details {
   padding: 10px;
-  margin:2em 0;
   position: relative;
   padding: 0.5em 1.5em;
+  height: 100%;
   border-top: solid 2px black;
   border-bottom: solid 2px black;
 }
@@ -97,8 +108,9 @@ div.skil-details p {
 }
 
 /* キャリア */
-div.career ul {
-  list-style: none;
+div.performance p.label {
+  width: 50%;
+  margin: 5em;
 }
 
 /****** フッター ******/
