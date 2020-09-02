@@ -15,6 +15,19 @@ body {
   background-color: whitesmoke;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 23px;
+}
+
 /****** ヘッダー ******/
 header {
   position: relative;
@@ -76,9 +89,14 @@ p.name {
   text-align: center;
 }
 
+p.self-introduction {
+  color: dimgray;
+  font-size: 14px;
+}
+
 /* コンタクト */
 div.contact p.label {
-  width: 30%;
+  width: 25%;
 }
 
 /* スキル */
@@ -107,10 +125,55 @@ div.skil-details p {
     padding: 0;
 }
 
+div.skils {
+  padding-bottom: 18px;
+}
+
+div.skils h2 {
+  margin-bottom: 0.8em;
+}
+
+div.skils ul {
+  margin-left: 20%;
+}
+
+div.skils p.tech {
+  width: 40%;
+}
+
+div.skils i {
+  width: 15px;
+  margin-right:0.8em;
+}
+
+/* 成果物 */
+div.performance{
+  height: 10em;
+}
+
 /* キャリア */
-div.performance p.label {
-  width: 50%;
-  margin: 5em;
+div.career p {
+  margin: 0;
+}
+
+div.career p.project {
+  width: 70%;
+}
+
+div.career p.year {
+  display: inline;
+}
+
+div.career {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 1.5em;
+}
+
+div.career li {
+  border-bottom: 2px dashed;
+  width: 100%;
+  margin: 1.2em 5em 0 0;
 }
 
 /****** フッター ******/
