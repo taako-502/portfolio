@@ -99,6 +99,11 @@ div.contact p.label {
   width: 25%;
 }
 
+div.contact ul {
+  display: flex;
+  flex-direction: row;
+}
+
 /* スキル */
 div.skil-details {
   padding: 10px;
@@ -161,7 +166,8 @@ div.career p.project {
 }
 
 div.career p.year {
-  display: inline;
+  width: 30%;
+  text-align: right;
 }
 
 div.career {
