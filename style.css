@@ -182,6 +182,10 @@ div.career li {
   margin: 1.2em 5em 0 0;
 }
 
+div.twitter {
+  height: 500px;
+}
+
 /****** フッター ******/
 footer {
   width: 100%;
