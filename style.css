@@ -152,8 +152,28 @@ div.skils i {
 }
 
 /* 成果物 */
-div.performance{
-  height: 10em;
+div.work-area {
+  display: flex;
+  flex-direction: row;
+}
+
+div.performance a:hover {
+  text-decoration: none;
+}
+
+div.work-card {
+  max-width: 380px;
+  max-height: 600px;
+  border: 1px solid dimgray;
+}
+
+div.work-card img {
+  width: auto;
+}
+
+div.work-card p.title ,
+div.work-card p.description {
+  color: dimgray;
 }
 
 /* キャリア */
