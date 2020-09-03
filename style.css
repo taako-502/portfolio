@@ -74,13 +74,8 @@ div.block {
   background-color: white;
 }
 
-div.block i {
+div.block h2 i {
   margin-right: 15px;
-}
-
-div.block li {
-  display:flex;
-  list-style: none;
 }
 
 /* プロフィール */
@@ -95,13 +90,90 @@ p.self-introduction {
 }
 
 /* コンタクト */
+span.label {
+  font-size: 16px;
+}
+
+span.mail {
+  font-size: 16px;
+}
+
 div.contact p.label {
   width: 25%;
 }
 
-div.contact ul {
+/* SNSボタン全体 */
+ul.snsbtniti {
+  list-style: none;
+}
+
+.flowbtn {
+  font-family: 'Arial', sans-serif;
+  /* 好きなフォントを指定してね */
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 58px;
+  font-size: 30px;
+  color: #fff !important;
+  transition: .5s;
+  text-decoration: none;
+  box-shadow: 0 1px 2px #999;
+}
+
+.flowbtn i{
+  position:relative;
+  bottom:0px;
+}
+/* Twitter */
+.fl_tw1 {
+  background: #55acee;
+}
+
+/* Github */
+.fl_git {
+  background: #000;
+}
+
+/* WordPress */
+.fl_wp {
+  background: #1ba5dc;
+}
+
+/* ボタン内テキスト調整 */
+.flowbtn div {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0;
+  position: relative;
+  bottom: 4px;
+}
+
+/* ボタンマウスホバー時 */
+.flowbtn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+/* ulタグの内側余白を０にする */
+ul.snsbtniti {
+  padding: 0 !important;
+}
+
+/* ボタン全体の位置調整 */
+.snsbtniti {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* ボタン同士の余白調整 */
+.snsbtniti li {
+  flex: 0 0 33%;
+  text-align: center !important;
 }
 
 /* スキル */
@@ -113,25 +185,35 @@ div.skil-details {
   border-top: solid 2px black;
   border-bottom: solid 2px black;
 }
+
 div.skil-details:before,
-div.skil-details:after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 2px;
-    height: -webkit-calc(100% + 20px);
-    height: calc(100% + 20px);
-    background-color: black;
+div.skil-details:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
 }
-div.skil-details:before {left: 10px;}
-div.skil-details:after {right: 10px;}
+
+div.skil-details:before {
+  left: 10px;
+}
+
+div.skil-details:after {
+  right: 10px;
+}
+
 div.skil-details p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 div.skils {
-  padding-bottom: 18px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  padding-bottom: 2em;
 }
 
 div.skils h2 {
@@ -139,7 +221,12 @@ div.skils h2 {
 }
 
 div.skils ul {
-  margin-left: 20%;
+  margin-left: 1.2em;
+}
+
+div.skils li {
+  display: flex;
+  list-style: none;
 }
 
 div.skils p.tech {
@@ -148,13 +235,38 @@ div.skils p.tech {
 
 div.skils i {
   width: 15px;
-  margin-right:0.8em;
+  margin-right: 0.8em;
+}
+
+p.label {
+  text-align: left;
+}
+
+p.level {
+  width: 50%;
+  text-align: right;
 }
 
 /* 成果物 */
 div.work-area {
+  /* 高さを揃える start */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   display: flex;
-  flex-direction: row;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 高さを揃える end */
 }
 
 div.explanation {
@@ -165,8 +277,14 @@ div.performance a:hover {
   text-decoration: none;
 }
 
+div.performance a {
+  display: block;
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+}
+
 div.work-card {
-  max-width: 380px;
+  max-width: 340px;
   max-height: 600px;
   border: 1px solid dimgray;
 }
@@ -175,9 +293,17 @@ div.work-card img {
   width: auto;
 }
 
-div.work-card p.title ,
+div.work-card h3.title,
 div.work-card p.description {
   color: dimgray;
+}
+
+div.work-card h3.title {
+  font-size: 18px;
+}
+
+p.description {
+  margin: 0;
 }
 
 /* キャリア */
@@ -201,6 +327,8 @@ div.career {
 }
 
 div.career li {
+  display: flex;
+  list-style: none;
   border-bottom: 2px dashed;
   width: 100%;
   margin: 1.2em 5em 0 0;
@@ -231,24 +359,18 @@ div.copyright p {
 /****** レスポンシブ ******/
 @media screen and (max-width:1128px) {
   /****** ヘッダー ******/
-
   /****** メイン ******/
-
   /****** フッター ******/
 }
 
 @media screen and (max-width:980px) {
   /****** ヘッダー ******/
-
   /****** メイン ******/
-
   /****** フッター ******/
 }
 
 @media (max-width:768px) {
   /****** ヘッダー ******/
-
   /****** メイン ******/
-
   /****** フッター ******/
 }
