@@ -157,6 +157,10 @@ div.work-area {
   flex-direction: row;
 }
 
+div.explanation {
+  padding: 2em;
+}
+
 div.performance a:hover {
   text-decoration: none;
 }
