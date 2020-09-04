@@ -84,7 +84,7 @@ header a {
 }
 header a span {
   position: absolute;
-  top: 0;
+  bottom: 78px;
   left: 50%;
   width: 24px;
   height: 24px;
@@ -103,12 +103,12 @@ header a span:nth-of-type(1) {
   animation-delay: 0s;
 }
 header a span:nth-of-type(2) {
-  top: 16px;
+  bottom: 62px;
   -webkit-animation-delay: .15s;
   animation-delay: .15s;
 }
 header a span:nth-of-type(3) {
-  top: 32px;
+  bottom: 46px;
   -webkit-animation-delay: .3s;
   animation-delay: .3s;
 }
@@ -448,7 +448,15 @@ div.copyright p {
 
 @media screen and (max-width:980px) {
   /****** ヘッダー ******/
+  header h1 {
+    font-size: 60px;
+  }
+
+  header div.title p {
+    font-size: 30px;
+  }
   /****** メイン ******/
+
   /****** フッター ******/
 }
 
