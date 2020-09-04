@@ -367,8 +367,8 @@ div.performance a {
 }
 
 div.work-card {
-  max-width: 340px;
-  max-height: 600px;
+  /*max-width: 340px;
+  max-height: 600px;*/
   border: 1px solid dimgray;
 }
 
@@ -458,8 +458,12 @@ div.copyright p {
 
   div.skil-area {
     padding-top: 1.2em;
+    padding-bottom: 1.2em;
   }
 
+  div.work-card {
+    margin: 1.2em auto;
+  }
   /****** メイン ******/
 
   /****** フッター ******/
