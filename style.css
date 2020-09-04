@@ -423,16 +423,19 @@ footer {
   height: auto;
   background-color: #333;
   padding: 40px 0;
+  position: relative;
 }
 
 div.copyright {
   color: white;
   position: absolute;
-  /* 左右中央寄せ */
+  /* 左右中央寄せ START*/
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+  /* 左右中央寄せ END*/
+  bottom: 40%;
 }
 
 div.copyright p {
@@ -467,10 +470,22 @@ div.copyright p {
   /****** メイン ******/
 
   /****** フッター ******/
+  div.copyright {
+    top: 0;
+    bottom: 40%;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 @media (max-width:768px) {
   /****** ヘッダー ******/
   /****** メイン ******/
   /****** フッター ******/
+  div.copyright {
+    top: 0;
+    bottom: 20%;
+    display: flex;
+    align-items: flex-end;
+  }
 }
