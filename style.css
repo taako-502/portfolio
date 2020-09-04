@@ -455,6 +455,11 @@ div.copyright p {
   header div.title p {
     font-size: 30px;
   }
+
+  div.skil-area {
+    padding-top: 1.2em;
+  }
+
   /****** メイン ******/
 
   /****** フッター ******/
