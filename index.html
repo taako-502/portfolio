@@ -12,13 +12,15 @@
 
 <body>
   <header>
+    <div id="particles-js"></div>
     <div class="title">
       <h1>Taako's Portforio</h1>
       <p>System Engineer</p>
     </div>
+    <a href="#first"><span></span><span></span><span></span></a>
   </header>
   <main>
-    <div class="wrapper container">
+    <div id="first" class="wrapper container">
       <div class="row">
         <div class="col-md-7">
           <div class="profile block">
@@ -42,12 +44,20 @@
         <div class="col-md-5">
           <div class="contact block">
             <h2><i class="far fa-thumbs-up"></i>CONTACT</h2>
-            <p>e-mail</p>
-            <p>taakobiz502@gmail.com</p>
-            <ul>
-              <li><a href="https://taako-biz.com/">BLOG</a></li>
-              <li><a href="https://twitter.com/taakobiz">TWITTER</a></li>
-              <li><a href="https://github.com/taako-502">GITHUB</a></li>
+            <h3><i class="far fa-envelope"></i>e-mail</h3>
+            <span class="mail">taakobiz502@gmail.com</span>
+            <p class="mail">24時間以内に返信いたします</p>
+            <h3>BLOG & SNS</h3>
+            <ul class="snsbtniti">
+              <li><a href="https://taako-biz.com/" class="flowbtn fl_wp"><i class="fab fa-wordpress-simple"></i>
+                  <div>Twitter</div>
+                </a></li>
+              <li><a href="https://twitter.com/taakobiz" class="flowbtn fl_tw1"><i class="fab fa-twitter"></i>
+                  <div>Twitter</div>
+                </a></li>
+              <li><a href="https://github.com/taako-502" class="flowbtn fl_git"><i class="fab fa-github"></i>
+                  <div>github</div>
+                </a></li>
             </ul>
           </div>
         </div>
@@ -55,25 +65,49 @@
       <div class="skils block">
         <h2><i class="far fa-smile-wink"></i>SKILS</h2>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 skil-area">
             <div class="skil-details">
               <h3>PROGRAMING</h3>
               <ul>
-                <li><i class="fab fa-java"></i><p class="tech">java</p><p>★★★☆☆</p></li>
-                <li><i class="fas fa-code"></i><p class="tech">vb.net</p><p>★★★☆☆</p></li>
-                <li><i class="fab fa-php"></i><p class="tech">PHP</p><p>★★★☆☆</p></li>
-                <li><i class="fab fa-html5"></i><p class="tech">HTML+CSS</p><p>★★★☆☆</p></li>
+                <li><i class="fab fa-java"></i>
+                  <p class="tech">java</p>
+                  <p class="level">★★★☆☆</p>
+                </li>
+                <li><i class="fas fa-code"></i>
+                  <p class="tech">vb.net</p>
+                  <p class="level">★★★☆☆</p>
+                </li>
+                <li><i class="fab fa-php"></i>
+                  <p class="tech">PHP</p>
+                  <p class="level">★★★☆☆</p>
+                </li>
+                <li><i class="fab fa-html5"></i>
+                  <p class="tech">HTML+CSS</p>
+                  <p class="level">★★★☆☆</p>
+                </li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 skil-area">
             <div class="skil-details">
               <h3>SQL & LIBRARY</h3>
               <ul>
-                <li><i class="fas fa-database"></i><p class="tech">SQL Server</p><p>★★★★★</p></li>
-                <li><i class="fas fa-database"></i><p class="tech">DB2</p><p>★★☆☆☆</p></li>
-                <li><i class="fas fa-code-branch"></i><p class="tech">subversion</p><p>★★★★★</p></li>
-                <li><i class="fab fa-github"></i><p class="tech">git</p><p>★★★★☆</p></li>
+                <li><i class="fas fa-database"></i>
+                  <p class="tech">SQL Server</p>
+                  <p class="level">★★★★★</p>
+                </li>
+                <li><i class="fas fa-database"></i>
+                  <p class="tech">DB2</p>
+                  <p class="level">★★☆☆☆</p>
+                </li>
+                <li><i class="fas fa-code-branch"></i>
+                  <p class="tech">subversion</p>
+                  <p class="level">★★★★★</p>
+                </li>
+                <li><i class="fab fa-github"></i>
+                  <p class="tech">git</p>
+                  <p class="level">★★★★☆</p>
+                </li>
               </ul>
             </div>
           </div>
@@ -82,24 +116,87 @@
 
       <div class="performance block">
         <h2><i class="fas fa-code"></i>WORK</h2>
-        <p>COMMING SOON</p>
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="work-area">
+              <a href="https://www.mytheme.taako-biz.com/">
+                <div class="work-card">
+                  <img src="./images/MYTHEME.jpg" alt="">
+                  <div class="explanation">
+                    <h3 class="title">【自作テーマ】MY THEME</h3>
+                    <p class="description">
+                      WordPressの自作テーマを作成しました。
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <a href="https://www.reptilesshop.taako502.cfbx.jp/">
+              <div class="work-card">
+                <img src="./images/MYTHEME.jpg" alt="">
+                <div class="explanation">
+                  <h3 class="title">【自作テーマ】reptailshop</h3>
+                  <p class="description">
+                    WordPressの自作テーマを作成しました。
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <a href="https://taako-502.github.io/airbnb_copy1/">
+              <div class="work-card">
+                <img src="./images/Airbnb.jpg" alt="">
+                <div class="explanation">
+                  <h3 class="title">【模写】Airbnb</h3>
+                  <p class="description">
+                    下記サイトを模写しました。<br>
+                    Airbnbでお家、アパート、お部屋をシェアしよう
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
-
       <div class="row">
         <div class="col-md-8">
           <div class="career block">
             <h2><i class="fas fa-history"></i>CAREER</h2>
             <ul>
-              <li><p class="project">苫小牧高等専門学校　情報工学科</p><p class="year">2010 ~ 2015</p></li>
-              <li><p class="project">長岡技術科学大学　電気電子情報工学科</p><p class="year">2016 ~ 2017</p></li>
-              <li><p class="project">自動車保険プロジェクトASB割引追加対応（東京）</p><p class="year">2017 ~ 2018</p></li>
-              <li><p class="project">準メガバンク店頭端末アプリケーション開発（東京）</p><p class="year">2018 ~ 2019</p></li>
-              <li><p class="project">自治体向け総合行政システム保守（札幌）</p><p class="year">2019 ~ now</p></li>
+              <li>
+                <p class="project">苫小牧高等専門学校　情報工学科</p>
+                <p class="year">2010 ~ 2015</p>
+              </li>
+              <li>
+                <p class="project">長岡技術科学大学　電気電子情報工学科</p>
+                <p class="year">2016 ~ 2017</p>
+              </li>
+              <li>
+                <p class="project">自動車保険プロジェクトASB割引追加対応（東京）</p>
+                <p class="year">2017 ~ 2018</p>
+              </li>
+              <li>
+                <p class="project">準メガバンク店頭端末アプリケーション開発（東京）</p>
+                <p class="year">2018 ~ 2019</p>
+              </li>
+              <li>
+                <p class="project">自治体向け総合行政システム保守（札幌）</p>
+                <p class="year">2019 ~ now</p>
+              </li>
             </ul>
           </div>
         </div>
+<<<<<<< HEAD
         <div class="twitter col-md-4">
           <a class="twitter-timeline" data-lang="ja" data-height="355" data-theme="light" href="https://twitter.com/taakobiz?ref_src=twsrc%5Etfw">Tweets by taakobiz</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+=======
+        <div class="col-md-4">
+          <a class="twitter-timeline" data-height="320" href="https://twitter.com/taakobiz?ref_src=twsrc%5Etfw">Tweets by taakobiz</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+>>>>>>> 7fe6d104379b70d463f6c6b6fde42919e03e546c
         </div>
       </div>
     </div>
@@ -111,6 +208,8 @@
   </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript" src="js/particles.min.js"></script>
+  <script type="text/javascript" src="js/header.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
