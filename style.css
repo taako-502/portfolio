@@ -36,6 +36,18 @@ header {
   background-color: #333;
 }
 
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  z-index: 0;
+}
+
 div.header {
   position: absolute;
   top: 0;
@@ -66,6 +78,63 @@ div.title p {
   text-align: center;
 }
 
+/* スクロール */
+header a {
+  padding-top: 80px;
+}
+header a span {
+  position: absolute;
+  bottom: 78px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 2s infinite;
+  animation: sdb 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+header a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+header a span:nth-of-type(2) {
+  bottom: 62px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+header a span:nth-of-type(3) {
+  bottom: 46px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+@-webkit-keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 /****** メイン ******/
 div.block {
   border: 2px solid #333;
@@ -74,13 +143,8 @@ div.block {
   background-color: white;
 }
 
-div.block i {
+div.block h2 i {
   margin-right: 15px;
-}
-
-div.block li {
-  display:flex;
-  list-style: none;
 }
 
 /* プロフィール */
@@ -95,13 +159,104 @@ p.self-introduction {
 }
 
 /* コンタクト */
+div.contact h3 i {
+  margin-right: 0.4em;
+}
+
+span.label {
+  font-size: 16px;
+}
+
+span.mail {
+  font-size: 16px;
+}
+
+span.mail {
+  margin-left: 0.6em;
+  font-size: 20px;
+}
+
+p.mail{
+  color: dimgray;
+  margin-left: 0.6em;
+}
+
 div.contact p.label {
   width: 25%;
 }
 
-div.contact ul {
+/* SNSボタン全体 */
+ul.snsbtniti {
+  list-style: none;
+}
+
+.flowbtn {
+  font-family: 'Arial', sans-serif;
+  /* 好きなフォントを指定してね */
+  border-radius: 4px;
+  position: relative;
+  display: inline-block;
+  width: 66px;
+  height: 58px;
+  font-size: 30px;
+  color: #fff !important;
+  transition: .5s;
+  text-decoration: none;
+  box-shadow: 0 1px 2px #999;
+}
+
+.flowbtn i{
+  position:relative;
+  bottom:0px;
+}
+/* Twitter */
+.fl_tw1 {
+  background: #55acee;
+}
+
+/* Github */
+.fl_git {
+  background: #000;
+}
+
+/* WordPress */
+.fl_wp {
+  background: #1ba5dc;
+}
+
+/* ボタン内テキスト調整 */
+.flowbtn div {
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0;
+  position: relative;
+  bottom: 4px;
+}
+
+/* ボタンマウスホバー時 */
+.flowbtn:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+  text-decoration: none;
+}
+
+/* ulタグの内側余白を０にする */
+ul.snsbtniti {
+  padding: 0 !important;
+}
+
+/* ボタン全体の位置調整 */
+.snsbtniti {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+/* ボタン同士の余白調整 */
+.snsbtniti li {
+  flex: 0 0 33%;
+  text-align: center !important;
 }
 
 /* スキル */
@@ -113,25 +268,35 @@ div.skil-details {
   border-top: solid 2px black;
   border-bottom: solid 2px black;
 }
+
 div.skil-details:before,
-div.skil-details:after{
-    content: '';
-    position: absolute;
-    top: -10px;
-    width: 2px;
-    height: -webkit-calc(100% + 20px);
-    height: calc(100% + 20px);
-    background-color: black;
+div.skil-details:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
 }
-div.skil-details:before {left: 10px;}
-div.skil-details:after {right: 10px;}
+
+div.skil-details:before {
+  left: 10px;
+}
+
+div.skil-details:after {
+  right: 10px;
+}
+
 div.skil-details p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 div.skils {
-  padding-bottom: 18px;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  padding-bottom: 2em;
 }
 
 div.skils h2 {
@@ -139,7 +304,12 @@ div.skils h2 {
 }
 
 div.skils ul {
-  margin-left: 20%;
+  margin-left: 1.2em;
+}
+
+div.skils li {
+  display: flex;
+  list-style: none;
 }
 
 div.skils p.tech {
@@ -148,12 +318,75 @@ div.skils p.tech {
 
 div.skils i {
   width: 15px;
-  margin-right:0.8em;
+  margin-right: 0.8em;
+}
+
+p.label {
+  text-align: left;
+}
+
+p.level {
+  width: 50%;
+  text-align: right;
 }
 
 /* 成果物 */
-div.performance{
-  height: 10em;
+div.work-area {
+  /* 高さを揃える start */
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* 高さを揃える end */
+}
+
+div.explanation {
+  padding: 2em;
+}
+
+div.performance a:hover {
+  text-decoration: none;
+}
+
+div.performance a {
+  display: block;
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+}
+
+div.work-card {
+  /*max-width: 340px;
+  max-height: 600px;*/
+  border: 1px solid dimgray;
+}
+
+div.work-card img {
+  width: auto;
+}
+
+div.work-card h3.title,
+div.work-card p.description {
+  color: dimgray;
+}
+
+div.work-card h3.title {
+  font-size: 18px;
+}
+
+p.description {
+  margin: 0;
 }
 
 /* キャリア */
@@ -177,6 +410,8 @@ div.career {
 }
 
 div.career li {
+  display: flex;
+  list-style: none;
   border-bottom: 2px dashed;
   width: 100%;
   margin: 1.2em 5em 0 0;
@@ -192,16 +427,19 @@ footer {
   height: auto;
   background-color: #333;
   padding: 40px 0;
+  position: relative;
 }
 
 div.copyright {
   color: white;
   position: absolute;
-  /* 左右中央寄せ */
+  /* 左右中央寄せ START*/
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
+  /* 左右中央寄せ END*/
+  bottom: 40%;
 }
 
 div.copyright p {
@@ -211,24 +449,47 @@ div.copyright p {
 /****** レスポンシブ ******/
 @media screen and (max-width:1128px) {
   /****** ヘッダー ******/
-
   /****** メイン ******/
-
   /****** フッター ******/
 }
 
 @media screen and (max-width:980px) {
   /****** ヘッダー ******/
+  header h1 {
+    font-size: 60px;
+  }
 
+  header div.title p {
+    font-size: 30px;
+  }
+
+  div.skil-area {
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
+  }
+
+  div.work-card {
+    margin: 1.2em auto;
+  }
   /****** メイン ******/
 
   /****** フッター ******/
+  div.copyright {
+    top: 0;
+    bottom: 40%;
+    display: flex;
+    align-items: flex-end;
+  }
 }
 
 @media (max-width:768px) {
   /****** ヘッダー ******/
-
   /****** メイン ******/
-
   /****** フッター ******/
+  div.copyright {
+    top: 0;
+    bottom: 20%;
+    display: flex;
+    align-items: flex-end;
+  }
 }
